@@ -1,1 +1,7 @@
-<p>todo-item works!</p>
+<!--<pre><code>{{ photo | json }}</code></pre>-->
+
+<a [title]="photo.title" [id]="photo.id">
+  <img [src]="photo.thumbnailUrl" [alt]="photo.title">
+  <span>{{ photo.title }}</span>
+  <span (click)="onDelete.emit(photo.id)">❌</span>
+</a>

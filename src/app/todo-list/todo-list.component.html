@@ -1,1 +1,8 @@
-<p>todo-list works!</p>
+<main>
+  <input (keyup.enter)="addPhoto(titleInputRef.value); otherFn(); titleInputRef.value = ''" #titleInputRef placeholder="add title">
+  <element-todo-item
+    *ngFor="let photo of photos"
+    [photo]="photo"
+    (onDelete)="deletePhoto($event)"
+  ></element-todo-item>
+</main>
